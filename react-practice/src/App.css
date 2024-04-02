@@ -1,33 +1,55 @@
-body {
+body{
+  background-color:rgb(241, 241, 129);
+}
+
+.App{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+ 
+}
+form{
+  width: 30%;
   text-align: center;
-  background-color: bisque;
+  border: 1px solid rgb(226, 206, 206);
+  padding: 60px;
+  border-radius: 14px;
+}
+input{
+  padding: 20px; 
+  margin: 15px;
+  letter-spacing: 2px;
+  width: 90%;
+  border-radius: 6px;
 }
 label {
-  font-size: 25px;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bold;
+  font-size: 30px;
+  color: blue;
+  letter-spacing: 3px;
 }
-
-.input-wrapper {
-  margin-bottom: 30px;
-}
-
-.input-field {
-  width: 20%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-left: 10px;
-  font-size: 15px;
-}
-
 button {
-  width: 10%;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 15px;
-}
-span{
-  color: red;
-  margin-left: 10px;
+  display: block;
+  margin: 0 auto;
+  padding: 15px 10px;
+  width: 30%;
+  margin-top: 40px;
+  border: 1px solid blue;
+  border-radius: 12px;
+  background-color: blue;
+  color: yellow;
   font-size: 20px;
+  letter-spacing: 2px;
+}
+span {
+  display: block;
+  color: red;
+  font-size: 17px;
+  margin-top: 2px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
