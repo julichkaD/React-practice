@@ -6,10 +6,12 @@ import FormValidation from "./FormValidation";
 
 function App() {
   return (
-    <div className="App">
-   
-      <FormValidation />
-    </div>
+    <>
+      <header>Registration page</header>
+      <div className="App">
+        <FormValidation />
+      </div>
+    </>
   );
 }
 
