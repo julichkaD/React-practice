@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  background-color: bisque;
+}
+label {
+  font-size: 25px;
+}
+
+.input-wrapper {
+  margin-bottom: 30px;
+}
+
+.input-field {
+  width: 20%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+button {
+  width: 10%;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+span{
+  color: red;
+  margin-left: 10px;
+  font-size: 20px;
+}
