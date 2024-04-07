@@ -1,24 +1,33 @@
-body{
-  background-color:rgb(241, 241, 129);
+body {
+  background-color: rgb(250, 250, 181);
 }
 
-.App{
-  display:flex;
+.App {
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   width: 100vw;
- 
+  padding-top: 80px;
 }
-form{
+header {
+  font-size: 55px;
+  color: blue;
+  display: block;
+  text-align: center;
+  padding-top: 120px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+form {
   width: 30%;
   text-align: center;
   border: 1px solid rgb(226, 206, 206);
   padding: 60px;
   border-radius: 14px;
 }
-input{
-  padding: 20px; 
+input {
+  padding: 20px;
   margin: 15px;
   letter-spacing: 2px;
   width: 90%;
@@ -48,7 +57,7 @@ button {
 span {
   display: block;
   color: red;
-  font-size: 17px;
+  font-size: 18px;
   margin-top: 2px;
   font-weight: 500;
   letter-spacing: 2px;
