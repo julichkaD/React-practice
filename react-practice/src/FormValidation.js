@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-const FormValidation = () => {
+
+const FormValidation = (props) => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -10,15 +11,17 @@ const FormValidation = () => {
 
   const [error, setError] = useState({});
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
     setFormData({
       ...formData,
       [name]: value,
     });
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+ 
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
     const validationErrors = {};
     if (!formData.username.trim()) {
       validationErrors.username = "Username is required";
@@ -28,26 +31,28 @@ const FormValidation = () => {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       validationErrors.email = "Email is not valid";
     }
+
     if (!formData.password.trim()) {
       validationErrors.password = "Password is required";
     } else if (formData.password.length < 6) {
       validationErrors.password = "Password should be at least 6 characters";
     }
-    if (!formData.confirmPassword.trim()) {
-      validationErrors.confirmPassword = " Confirm Password is required";
-    } else if (formData.confirmPassword !== formData.password) {
+
+    if (formData.confirmPassword !== formData.password) {
       validationErrors.confirmPassword = "Password not matched";
     }
     setError(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
-      alert("Form submitted successfully");
-    }
+      //  alert(`Hello, dear ${formData.username}`);
+      //  <a href="/homePage">`Hello, dear ${formData.username}`</a>;
+       window.location.href = "/home-page";
+   }
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Username</label>
+        <label>Username </label>
         <input
           type="text"
           name="username"
@@ -64,17 +69,20 @@ const FormValidation = () => {
           name="email"
           placeholder="example@gmail.com"
           autoComplete="off"
+          onChange={handleChange}
         />
         {error.email && <span>{error.email}</span>}
       </div>
       <div>
-        <label>Password</label>
+        <label>Password </label>
         <input
           type="password"
           name="password"
           placeholder="**********"
           autoComplete="off"
+          onChange={handleChange}
         />
+
         {error.password && <span>{error.password}</span>}
       </div>
       <div>
@@ -84,7 +92,9 @@ const FormValidation = () => {
           name="confirmPassword"
           placeholder="**********"
           autoComplete="off"
+          onChange={handleChange}
         />
+
         {error.confirmPassword && <span>{error.confirmPassword}</span>}
       </div>
       <button>SUBMIT</button>
@@ -93,3 +103,4 @@ const FormValidation = () => {
 };
 
 export default FormValidation;
+
